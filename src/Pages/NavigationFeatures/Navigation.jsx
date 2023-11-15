@@ -1,24 +1,79 @@
 import React from 'react';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import {useNavigate} from 'react-router-dom';
+import { Divider, Flex, Button } from '@mantine/core';
 
-import CottageIcon from '@mui/icons-material/Cottage';
-import FactoryIcon from '@mui/icons-material/Factory';
+
 
 const Navigation = ({money, setMoney}) => {
     const navigate = useNavigate();
     return (
         <div>
-            <Stack direction="row" spacing={12} alignItems="center" justifyContent="space-evenly">
-                <Button onClick={() => navigate("/")}><CottageIcon fontSize='large'/></Button>
-                <Button variant="contained" onClick={() => navigate("/factory")}><FactoryIcon fontSize='small'/>Factory<FactoryIcon fontSize='small'/></Button>
-                <Button variant="contained" onClick={() => navigate("/storage")}>Storage</Button>
-                <Button variant="contained" onClick={() => navigate("/storefront")}>Storefront</Button>
-                <Button variant="contained" onClick={() => navigate("/managers")}>Managers</Button>
-                <Button variant="contained" onClick={() => navigate("/")}>Save/Load</Button>
-                <h1 style={{color: 'green'}}>${money}</h1>
-            </Stack>
+            <Flex
+                mih={50}
+                bg="rgba(0, 0, 0, .3)"
+                gap="xl"
+                justify="center"
+                align="center"
+                direction="row"
+                wrap="wrap"
+            >
+                <Button onClick={() => navigate("/")}>Home</Button>
+                <Divider size="sm" orientation="vertical" />
+                <Flex
+                    mih={50}
+                    bg="rgba(0, 0, 0, .3)"
+                    gap="sm"
+                    justify="flex-start"
+                    align="center"
+                    direction="row"
+                    wrap="wrap"
+                >
+                    <Button color="indigo" onClick={() => navigate("/water")}>Water</Button>
+                    <Button color="indigo" onClick={() => navigate("/waterupgrades")}>Upgrades</Button>
+                    <Button color="indigo" onClick={() => navigate("/watermanagers")}>Managers</Button>
+                </Flex>
+                <Divider size="sm" orientation="vertical" />
+                <Flex
+                    mih={50}
+                    bg="rgba(0, 0, 0, .3)"
+                    gap="sm"
+                    justify="center"
+                    align="center"
+                    direction="row"
+                    wrap="wrap"
+                >
+                    <Button color="yellow" onClick={() => navigate("/lemonade")}>Lemonade</Button>
+                    <Button color="yellow" onClick={() => navigate("/lemonadeupgrades")}>Upgrades</Button>
+                    <Button color="yellow" onClick={() => navigate("/lemonademanagers")}>Managers</Button>
+                </Flex>
+                <Divider size="sm" orientation="vertical" />
+                <Flex
+                    mih={50}
+                    bg="rgba(0, 0, 0, .3)"
+                    gap="sm"
+                    justify="center"
+                    align="center"
+                    direction="row"
+                    wrap="wrap"
+                >
+                    <Button color="pink" onClick={() => navigate("/specialdrinks")}>Special Drinks</Button>
+                    <Button color="pink" onClick={() => navigate("/specialdrinksupgrades")}>Upgrades</Button>
+                    <Button color="pink" onClick={() => navigate("/specialdrinksmanagers")}>Managers</Button>
+                </Flex>
+                <Divider size="sm" orientation="vertical" />
+                <Button onClick={() => navigate("/settings")}>Settings</Button>
+            </Flex>
+            <Flex 
+                mih={50}
+                bg="rgba(0, 0, 0, .3)"
+                gap="sm"
+                justify="center"
+                align="center"
+                direction="row"
+                wrap="wrap"
+            >
+                <h1 style={{margin: '0px', color:'green'}}>${money}</h1>
+            </Flex>
         </div>
     )
 }
