@@ -25,6 +25,7 @@ function App() {
   let [waterAmount, setWaterAmount] = useState(0)
   let [waterMaxAmount, setWaterMaxAmount] = useState(100)
   let [waterWellSpeed, setWaterWellSpeed] = useState(10)
+  let [waterPrice, setWaterPrice] = useState(0.50)
 
   return (
     <div className="App">
@@ -32,7 +33,7 @@ function App() {
         <Navigation money={money} setMoney={setMoney}/>
         <Routes>
           <Route exact path='/' element={<Home money={money} setMoney={setMoney} waterWellAmount={waterWellAmount} setWaterWellAmount={setWaterWellAmount} waterWellMaxAmount={waterWellMaxAmount} setWaterWellMaxAmount={setWaterWellMaxAmount} waterWellCost={waterWellCost} setWaterWellCost={setWaterWellCost} waterAmount={waterAmount} setWaterAmount={setWaterAmount} waterWellSpeed={waterWellSpeed} setWaterWellSpeed={setWaterWellSpeed} waterMaxAmount={waterMaxAmount} setWaterMaxAmount={setWaterMaxAmount}/>}/>
-          <Route path='/water' element ={<Water/>}/>
+          <Route path='/water' element ={<Water money={money} setMoney={setMoney} waterWellAmount={waterWellAmount} setWaterWellAmount={setWaterWellAmount} waterWellMaxAmount={waterWellMaxAmount} setWaterWellMaxAmount={setWaterWellMaxAmount} waterWellCost={waterWellCost} setWaterWellCost={setWaterWellCost} waterAmount={waterAmount} setWaterAmount={setWaterAmount} waterWellSpeed={waterWellSpeed} setWaterWellSpeed={setWaterWellSpeed} waterMaxAmount={waterMaxAmount} setWaterMaxAmount={setWaterMaxAmount} waterPrice={waterPrice} setWaterPrice={setWaterPrice}/>}/>
           <Route path='/watermanagers' element ={<WaterManagers/>}/>
           <Route path='/waterupgrades' element ={<WaterUpgrades/>}/>
           <Route path='/lemonade' element ={<Lemonade/>}/>

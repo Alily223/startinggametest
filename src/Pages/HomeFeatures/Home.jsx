@@ -67,8 +67,8 @@ const Home = ({money, setMoney, waterWellAmount, setWaterWellAmount, waterWellMa
                 <h2>Welcome to Thirst Clicker!</h2>
             </Flex>
             <Grid gutter="xs">
-                <Grid.Col span={4}>
-                    <Card shadow="sm" padding="sm" radius="md" withBorder>
+                <Grid.Col span={4} >
+                    <Card shadow="sm" padding="sm" radius="md" withBorder >
                         <Card.Section>
 
                         </Card.Section>
@@ -89,7 +89,7 @@ const Home = ({money, setMoney, waterWellAmount, setWaterWellAmount, waterWellMa
                     </Card>
                 </Grid.Col>
                 <Grid.Col span={4}>
-                    <Card shadow="sm" padding="sm" radius="md" withBorder>
+                    <Card shadow="sm" padding="sm" radius="md" withBorder >
                         <Card.Section>
 
                         </Card.Section>
@@ -110,7 +110,7 @@ const Home = ({money, setMoney, waterWellAmount, setWaterWellAmount, waterWellMa
                     </Card>
                 </Grid.Col>
                 <Grid.Col span={4}>
-                    <Card shadow="sm" padding="sm" radius="md" withBorder>
+                    <Card shadow="sm" padding="sm" radius="md" withBorder >
                         <Card.Section>
 
                         </Card.Section>
