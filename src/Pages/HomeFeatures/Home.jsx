@@ -49,7 +49,7 @@ const Home = ({money, setMoney, energy, setEnergy}) => {
                             <Flex mih={50} gap="xs" justify="center" align="center" direction="column" wrap="wrap">
                                 <Text weight={500}>{name} {details.energyCost ? (<Badge variant="light" color="yellow" leftSection={<IconBolt size={12} />}>{details.energyCost}</Badge>) : null}</Text>
                                 <Text size="sm">{details.description}</Text>
-                                {details.freeCreation === true ? <Button variant="light" color="yellow" fullWidth radius="md" onClick={details.onUse}>Create Energy</Button>: null}
+                                {details.freeCreation === true ? <Button variant="light" color="yellow" fullWidth radius="md" onClick={details.onUse}>Create {name}</Button>: null}
                                 
                             </Flex>
                         </Card>
