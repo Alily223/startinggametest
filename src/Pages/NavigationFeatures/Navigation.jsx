@@ -1,10 +1,11 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import { Divider, Flex, Button } from '@mantine/core';
+import { IconBolt } from '@tabler/icons-react';
 
 
 
-const Navigation = ({money, setMoney}) => {
+const Navigation = ({money, setMoney, energy, setEnergy}) => {
     const navigate = useNavigate();
     return (
         <div>
@@ -28,37 +29,9 @@ const Navigation = ({money, setMoney}) => {
                     direction="row"
                     wrap="wrap"
                 >
-                    <Button color="indigo" onClick={() => navigate("/water")}>Water</Button>
-                    <Button color="indigo" onClick={() => navigate("/waterupgrades")}>Upgrades</Button>
-                    <Button color="indigo" onClick={() => navigate("/watermanagers")}>Managers</Button>
-                </Flex>
-                <Divider size="sm" orientation="vertical" />
-                <Flex
-                    mih={50}
-                    bg="rgba(0, 0, 0, .3)"
-                    gap="sm"
-                    justify="center"
-                    align="center"
-                    direction="row"
-                    wrap="wrap"
-                >
-                    <Button color="yellow" onClick={() => navigate("/lemonade")}>Lemonade</Button>
-                    <Button color="yellow" onClick={() => navigate("/lemonadeupgrades")}>Upgrades</Button>
-                    <Button color="yellow" onClick={() => navigate("/lemonademanagers")}>Managers</Button>
-                </Flex>
-                <Divider size="sm" orientation="vertical" />
-                <Flex
-                    mih={50}
-                    bg="rgba(0, 0, 0, .3)"
-                    gap="sm"
-                    justify="center"
-                    align="center"
-                    direction="row"
-                    wrap="wrap"
-                >
-                    <Button color="pink" onClick={() => navigate("/specialdrinks")}>Special Drinks</Button>
-                    <Button color="pink" onClick={() => navigate("/specialdrinksupgrades")}>Upgrades</Button>
-                    <Button color="pink" onClick={() => navigate("/specialdrinksmanagers")}>Managers</Button>
+                    <Button color="indigo" onClick={() => navigate("/")}>God Upgrades</Button>
+                    <Button color="indigo" onClick={() => navigate("/")}>Money Upgrades</Button>
+                    <Button color="indigo" onClick={() => navigate("/")}>Managers</Button>
                 </Flex>
                 <Divider size="sm" orientation="vertical" />
                 <Button onClick={() => navigate("/settings")}>Settings</Button>
@@ -73,6 +46,7 @@ const Navigation = ({money, setMoney}) => {
                 wrap="wrap"
             >
                 <h1 style={{margin: '0px', color:'green'}}>${money}</h1>
+                <h1 style={{margin: '0px', color:'yellow'}}><IconBolt/>{energy}</h1>
             </Flex>
         </div>
     )
